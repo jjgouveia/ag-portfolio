@@ -1,4 +1,4 @@
-import { Database } from "@/app/interfaces/database.types";
+import { Database, Json } from "@/app/interfaces/database.types";
 import { supabase } from "@/app/utils/supabase";
 import React, { useEffect, useState } from "react";
 import "./style.css";
@@ -45,6 +45,7 @@ const PostCard: React.FC = () => {
       style={{
         overflowX: "scroll",
         width: "100%",
+        height: "100%",
         cursor: "grab",
         scrollBehavior: "smooth",
       }}
