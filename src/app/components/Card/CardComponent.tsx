@@ -41,11 +41,12 @@ const PostCard: React.FC = () => {
 
   return (
     <div
-      className="flex flex-row overflow-x-scroll overflow-y-hidden gap-7"
+      className="flex flex-row w-full h-full overflow-x-scroll overflow-y-hidden gap-4"
       style={{
+        // border: "1px solid red",
         overflowX: "scroll",
-        width: "100%",
-        height: "100%",
+        // width: "100%",
+        height: "65%",
         cursor: "grab",
         scrollBehavior: "smooth",
       }}
@@ -54,7 +55,12 @@ const PostCard: React.FC = () => {
         return (
           <div
             key={product.id}
-            className="post-card min-w-full min-h-full flex flex-col gap-4"
+            className="post-card items-center flex flex-col md:max-w-sm sm:max-w-md w-72 h-96"
+            style={{
+              minHeight: "360px",
+              maxWidth: "360px",
+              minWidth: "250px",
+            }}
           >
             <div
               className="img-container"
@@ -62,7 +68,6 @@ const PostCard: React.FC = () => {
                 backgroundImage: `url(${product.image[0]})`,
               }}
             ></div>
-
             <div className="post-text">
               <div className="post-meta">
                 <span className="post-category">
