@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import PostCard from "./components/Card/CardComponent";
 import ContactComponent from "./components/ContactComponent";
 import Hero from "./components/Hero";
 import SectionComponent from "./components/SectionComponent";
@@ -17,6 +18,8 @@ const Home: React.FC = () => {
             Aqui você encontra os melhores produtos para sua clínica
             odontológica.
           </p>
+          <PostCard />
+          {/* <ProductsComponent /> */}
         </SectionComponent>
         <SectionComponent
           id="tab-servicos"
