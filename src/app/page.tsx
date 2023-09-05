@@ -13,7 +13,10 @@ const Home: React.FC = () => {
       <Hero />
       <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
         <SectionComponent id="tab-produtos" title="Produtos">
-          <h3>something about es6</h3>
+          <p>
+            Aqui você encontra os melhores produtos para sua clínica
+            odontológica.
+          </p>
         </SectionComponent>
         <SectionComponent
           id="tab-servicos"
@@ -31,7 +34,7 @@ const Home: React.FC = () => {
               height={250}
               objectPosition="center"
               quality={100}
-              className="rounded-full mt-2"
+              className="rounded-tl-3xl rounded-br-3xl"
             />
             <h2>Anderson Gouveia,</h2>
             <p className="text-justify ">

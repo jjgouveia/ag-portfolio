@@ -11,7 +11,7 @@ export default function Services({ title = "Serviços" }: ServicesProps) {
       <ul className="c-services">
         <li className="c-services__item">
           <h3>Know How</h3>
-          <p>
+          <p className="mb-5">
             Explico os avanços nos tratamentos e técnicas odontológicas - e como
             os equipamentos, materiais e suprimentos ajudam os profissionais da
             área a oferecer os tratamentos e serviços, identificando formas de

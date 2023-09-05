@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
         });
       }
 
-      private onTabClick(event: MouseEvent, element: HTMLElement) {
+      private onTabClick(event: any, element: any) {
         event.preventDefault();
         const scrollTop =
           (document.querySelector(element.getAttribute("href")!) as HTMLElement)
@@ -126,9 +126,10 @@ const Hero: React.FC = () => {
     <section className="et-hero-tabs" id="hero-cover">
       <div>
         <h1 className="text-5xl m-0">Anderson Gouveia</h1>
-        <h3 className="text-xl opacity-60 tracking-widest">
+        <h3 className="text-xl opacity-60 tracking-widest m-3 p-1 border-t border-b border-gray-500 border-1">
           Representante Comercial
         </h3>
+        <h2 className="text-2xl">portfólio</h2>
       </div>
       <div className="et-hero-tabs-container bg-gray-50 flex flex-row absolute bottom-0 w-full h-12 z-10">
         <a

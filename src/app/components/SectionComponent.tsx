@@ -11,7 +11,7 @@ export default function SectionComponent({
   propTitle = true,
   title,
   children,
-  className = "et-slide",
+  className = "et-slide w-full h-full",
 }: SectionComponentProps): JSX.Element {
   return (
     <section className={className} id={id}>
