@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <Services title="Meus Serviços" />
         </SectionComponent>
         <SectionComponent id="tab-sobre" title="Sobre">
-          <div className="w-full h-full flex flex-col mt-4  mb-4 items-center  gap-4 sm:w-3/4">
+          <div className="w-full h-full flex flex-col mt-4 mb-4 items-center gap-4 sm:w-3/4">
             <Image
               src="/assets/images/ag.png"
               alt="Anderson Gouveia"
