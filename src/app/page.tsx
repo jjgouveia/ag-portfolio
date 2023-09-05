@@ -1,25 +1,65 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
+import ContactComponent from "./components/ContactComponent";
 import Hero from "./components/Hero";
 import SectionComponent from "./components/SectionComponent";
+import Services from "./components/Services";
 
 const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <main className="et-main">
+      <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
         <SectionComponent id="tab-produtos" title="Produtos">
           <h3>something about es6</h3>
         </SectionComponent>
-        <SectionComponent id="tab-servicos" title="Serviços">
-          <h3>something about react</h3>
+        <SectionComponent
+          id="tab-servicos"
+          className="c-section"
+          propTitle={false}
+        >
+          <Services title="Meus Serviços" />
         </SectionComponent>
         <SectionComponent id="tab-sobre" title="Sobre">
-          <h3>something about angular</h3>
+          <div className="w-full h-full flex flex-col mt-4  mb-4 items-center  gap-4 sm:w-3/4">
+            <Image
+              src="/assets/images/ag.png"
+              alt="Anderson Gouveia"
+              width={250}
+              height={250}
+              objectPosition="center"
+              quality={100}
+              className="rounded-full mt-2"
+            />
+            <h2>Anderson Gouveia,</h2>
+            <p className="text-justify ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              consequuntur illo, saepe ex sequi nisi veniam inventore quo
+              voluptate assumenda vitae dicta accusantium debitis excepturi,
+              eligendi tenetur? Magnam, recusandae neque? Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Voluptas a cupiditate libero
+              omnis! At tenetur, fugit cumque, ab rerum ullam harum unde minus
+              dolores iure distinctio et cupiditate sapiente quia!
+            </p>
+          </div>
         </SectionComponent>
         <SectionComponent id="tab-contato" title="Contato">
-          <h3>something about vue</h3>
+          <ul className="flex flex-col w-full gap-4">
+            <ContactComponent
+              icon="/assets/images/icons/whatsapp.svg"
+              link="https://wa.me/5581988670414"
+              text="Entrar em contato pelo WhatsApp"
+              altText="WhatsApp de Anderson Gouveia"
+            />
+            <ContactComponent
+              icon="/assets/images/icons/instagram.svg"
+              link="https://wa.me/5581988670414"
+              text="Visualizar perfil no Instagram"
+              altText="Perfil oficial no Instagram"
+            />
+          </ul>
         </SectionComponent>
         <section className="et-slide" id="tab-footer">
           <h1>Other</h1>

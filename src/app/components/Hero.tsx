@@ -125,23 +125,40 @@ const Hero: React.FC = () => {
   return (
     <section className="et-hero-tabs" id="hero-cover">
       <div>
-        <h1>Anderson Gouveia</h1>
-        <h3>Representante Comercial</h3>
+        <h1 className="text-5xl m-0">Anderson Gouveia</h1>
+        <h3 className="text-xl opacity-60 tracking-widest">
+          Representante Comercial
+        </h3>
       </div>
-      <div className="et-hero-tabs-container">
-        <a className="et-hero-tab" href="#hero-cover">
+      <div className="et-hero-tabs-container bg-gray-50 flex flex-row absolute bottom-0 w-full h-12 z-10">
+        <a
+          className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          href="#hero-cover"
+        >
           Início
         </a>
-        <a className="et-hero-tab" href="#tab-produtos">
+        <a
+          className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          href="#tab-produtos"
+        >
           Produtos
         </a>
-        <a className="et-hero-tab" href="#tab-servicos">
+        <a
+          className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          href="#tab-servicos"
+        >
           Serviços
         </a>
-        <a className="et-hero-tab" href="#tab-sobre">
+        <a
+          className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          href="#tab-sobre"
+        >
           Sobre
         </a>
-        <a className="et-hero-tab" href="#tab-contato">
+        <a
+          className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          href="#tab-contato"
+        >
           Contato
         </a>
         <span className="et-hero-tab-slider"></span>

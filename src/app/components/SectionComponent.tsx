@@ -1,17 +1,21 @@
 type SectionComponentProps = {
   id: string;
-  title: string;
+  title?: string;
   children: React.ReactNode;
+  className?: string;
+  propTitle?: boolean;
 };
 
 export default function SectionComponent({
   id,
+  propTitle = true,
   title,
   children,
+  className = "et-slide",
 }: SectionComponentProps): JSX.Element {
   return (
-    <section className="et-slide" id={id}>
-      <h1>{title}</h1>
+    <section className={className} id={id}>
+      {propTitle && <h1 className="text-4xl m-0 mb-4">{title}</h1>}
       {children}
     </section>
   );

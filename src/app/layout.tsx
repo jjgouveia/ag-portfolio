@@ -4,6 +4,22 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { Lora, Nunito } from "next/font/google";
+
+const lora = Lora({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "600", "700"],
+  variable: "--font-lora",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-nunito",
+});
+
 export const metadata: Metadata = {
   title: "Anderson Gouveia",
   description:
@@ -31,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={`${lora.variable} ${nunito.variable}`}>{children}</body>
     </html>
   );
 }
