@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import { Lora, Nunito } from "next/font/google";
+import { Providers } from "./providers";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -47,7 +48,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${lora.variable} ${nunito.variable}`}>{children}</body>
+      <body className={`${lora.variable} ${nunito.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
