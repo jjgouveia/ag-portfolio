@@ -2,7 +2,10 @@ import { Card, Skeleton } from "@nextui-org/react";
 
 export default function App() {
   return (
-    <Card className="w-[300px] h-[380px] mr-5 space-y-5 p-4" radius="lg">
+    <Card
+      className="w-[300px] h-[380px] min-w-[240px] min-h-[340px] mr-5 space-y-5 p-4"
+      radius="lg"
+    >
       <Skeleton className="rounded-lg">
         <div className="h-36 rounded-lg bg-default-300"></div>
       </Skeleton>

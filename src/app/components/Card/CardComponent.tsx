@@ -41,10 +41,9 @@ const PostCard: React.FC = () => {
     <ScrollShadow
       orientation="horizontal"
       size={15}
-      className="flex flex-row w-full h-full overflow-x-scroll overflow-y-hidden h-500px gap-4"
+      className="flex flex-row w-full overflow-x-scroll overflow-y-hidden h-500px gap-4"
       style={{
         scrollBehavior: "smooth",
-        scrollbarWidth: "none",
       }}
     >
       {products
