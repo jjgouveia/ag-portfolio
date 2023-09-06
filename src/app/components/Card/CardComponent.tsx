@@ -1,6 +1,7 @@
 import { Database, Json } from "@/app/interfaces/database.types";
 import { supabase } from "@/app/utils/supabase";
 import { ScrollShadow } from "@nextui-org/react";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import CardSkeleton from "../CardSkeleton";
 import "./style.css";
@@ -51,7 +52,7 @@ const PostCard: React.FC = () => {
             return (
               <div
                 key={product.id}
-                className="post-card items-center flex flex-col md:max-w-sm sm:max-w-md w-72 h-96"
+                className="post-card relative items-center flex flex-col md:max-w-sm sm:max-w-md w-72 h-96"
                 style={{
                   minHeight: "400px",
                   maxWidth: "360px",
@@ -78,8 +79,16 @@ const PostCard: React.FC = () => {
                   </div>
                   <h3 className="post-title">{product.name}</h3>
                   <p className="post-desc">
-                    {product.description?.slice(0, 150)}
+                    {product.description?.slice(0, 100).concat("...")}
                   </p>
+                </div>
+                <div className="absolute bottom-2">
+                  <Link
+                    href={`/products/${product.id}`}
+                    className="btn btn-primary"
+                  >
+                    Ver mais
+                  </Link>
                 </div>
               </div>
             );
