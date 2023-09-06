@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
         </h3>
         <h2 className="text-2xl">portfólio</h2>
       </div>
-      <div className="et-hero-tabs-container bg-gray-50 flex flex-row absolute bottom-4 w-full h-12 z-10">
+      <div className="et-hero-tabs-container bg-gray-50 flex flex-row absolute bottom-0 w-full h-12 z-10">
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
           href="#hero-cover"
