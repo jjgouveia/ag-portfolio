@@ -17,7 +17,6 @@ type ProductsComponentProps = {
 };
 
 const PostCard: React.FC = () => {
-  const [shareOpen, setShareOpen] = useState<boolean>(false);
   const [products, setProducts] = useState<Database | null | any>(null);
 
   useEffect(() => {
@@ -35,20 +34,15 @@ const PostCard: React.FC = () => {
     fetchData();
   }, []);
 
-  const toggleShare = () => {
-    setShareOpen(!shareOpen);
-  };
-
   return (
     <div
-      className="flex flex-row w-full h-full overflow-x-scroll overflow-y-hidden gap-4"
+      className="flex flex-row w-full h-full overflow-x-scroll overflow-y-hidden gap-4 border-r-2 border-gray-800"
       style={{
-        // border: "1px solid red",
         overflowX: "scroll",
-        // width: "100%",
-        height: "65%",
+        height: "62%",
         cursor: "grab",
         scrollBehavior: "smooth",
+        boxShadow: "0 0 10px #000 inset",
       }}
     >
       {products?.map((product: ProductsComponentProps) => {
@@ -66,6 +60,7 @@ const PostCard: React.FC = () => {
               className="img-container"
               style={{
                 backgroundImage: `url(${product.image[0]})`,
+                borderBottom: "1px solid #ccc",
               }}
             ></div>
             <div className="post-text">
