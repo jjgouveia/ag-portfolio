@@ -29,7 +29,7 @@ export default function DetalhesProduto({
   }, [params.id]);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen">
       {product ? (
         <div className="flex flex-col min-h-max items-center justify-center mt-12 pt-5">
           <div className="flex flex-col w-full h-full items-center justify-center">
