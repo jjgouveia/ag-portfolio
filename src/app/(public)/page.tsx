@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import React from "react";
-import PostCard from "./components/Card/CardComponent";
-import ContactComponent from "./components/ContactComponent";
-import Hero from "./components/Hero";
-import SectionComponent from "./components/SectionComponent";
-import Services from "./components/Services";
+import ProductCard from "../components/Card/ProductCard";
+import ContactComponent from "../components/ContactComponent";
+import Hero from "../components/Hero";
+import SectionComponent from "../components/SectionComponent";
+import Services from "../components/Services";
 
 const Home: React.FC = () => {
   return (
@@ -14,12 +14,7 @@ const Home: React.FC = () => {
       <Hero />
       <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
         <SectionComponent id="tab-produtos" title="Produtos">
-          <p>
-            Aqui você encontra os melhores produtos para sua clínica
-            odontológica.
-          </p>
-          <PostCard />
-          {/* <ProductsComponent /> */}
+          <ProductCard />
         </SectionComponent>
         <SectionComponent
           id="tab-servicos"

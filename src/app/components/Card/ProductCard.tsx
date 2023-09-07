@@ -1,26 +1,16 @@
-import { Database, Json } from "@/app/interfaces/database.types";
+import { Database } from "@/app/interfaces/database.types";
+import { ProductType } from "@/app/types/ProductType";
 import { supabase } from "@/app/utils/supabase";
 import { ScrollShadow } from "@nextui-org/react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import CardSkeleton from "../CardSkeleton";
 import "./style.css";
 
-type ProductsComponentProps = {
-  aditional: Json[] | null;
-  category: string[];
-  color: string[];
-  context: string;
-  description: string | null;
-  id: number;
-  image: string[];
-  manual: string | null;
-  name: string;
-  price: number | null;
-};
-
-const PostCard: React.FC = () => {
+const ProductCard: React.FC = () => {
   const [products, setProducts] = useState<Database | null | any>(null);
+
+  const { push } = useRouter();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +28,10 @@ const PostCard: React.FC = () => {
     fetchData();
   }, []);
 
+  const handleProduct = (id: number) => {
+    push(`/produtos/${id}`);
+  };
+
   return (
     <ScrollShadow
       orientation="horizontal"
@@ -48,7 +42,7 @@ const PostCard: React.FC = () => {
       }}
     >
       {products
-        ? products?.map((product: ProductsComponentProps) => {
+        ? products?.map((product: ProductType) => {
             return (
               <div
                 key={product.id}
@@ -83,12 +77,12 @@ const PostCard: React.FC = () => {
                   </p>
                 </div>
                 <div className="absolute bottom-2">
-                  <Link
-                    href={`/products/${product.id}`}
-                    className="btn btn-primary"
+                  <button
+                    type="button"
+                    onClick={() => handleProduct(product.id)}
                   >
-                    Ver mais
-                  </Link>
+                    Mais informações
+                  </button>
                 </div>
               </div>
             );
@@ -98,4 +92,4 @@ const PostCard: React.FC = () => {
   );
 };
 
-export default PostCard;
+export default ProductCard;
