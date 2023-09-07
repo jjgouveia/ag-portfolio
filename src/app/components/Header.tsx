@@ -48,7 +48,10 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent
+        className="hidden sm:flex gap-4 border border-red-600"
+        justify="center"
+      >
         <NavbarBrand>
           <p className="font-bold text-black">Anderson Gouveia</p>
         </NavbarBrand>
