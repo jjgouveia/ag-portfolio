@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -10,6 +9,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 
 export default function App() {
