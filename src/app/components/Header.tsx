@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -9,7 +10,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-import Link from "next/link";
+import { Link as Linkin } from "next/link";
 import React from "react";
 
 export default function App() {
@@ -56,15 +57,17 @@ export default function App() {
           <p className="font-bold text-black">Anderson Gouveia</p>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="/">
+          <Link as={Linkin} color="foreground" href="/">
             Início
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="/#tab-produtos">Produtos</Link>
+          <Link as={Linkin} href="/#tab-produtos">
+            Produtos
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/#tab-sobre">
+          <Link as={Linkin} color="foreground" href="/#tab-sobre">
             Sobre
           </Link>
         </NavbarItem>
@@ -74,6 +77,7 @@ export default function App() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
+              as={Linkin}
               className="w-full"
               color={
                 index === 0
