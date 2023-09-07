@@ -30,7 +30,6 @@ const Home: React.FC = () => {
               alt="Anderson Gouveia"
               width={250}
               height={250}
-              objectPosition="center"
               quality={100}
               className="rounded-tl-3xl rounded-br-3xl"
             />
