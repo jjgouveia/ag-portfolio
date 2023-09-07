@@ -29,11 +29,11 @@ export default function DetalhesProduto({
   }, [params.id]);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-screen">
       {product ? (
-        <div className="flex flex-col w-full h-full items-center justify-center">
-          <h1 className="text-4xl m-0 mb-4">{product[0].name}</h1>
-          <div className="flex flex-row w-full h-full items-center justify-center">
+        <div className="flex flex-col min-h-max items-center justify-center mt-12 pt-5">
+          <div className="flex flex-col w-full h-full items-center justify-center">
+            <h1 className="text-4xl m-0 mb-4">{product[0].name}</h1>
             <div className="flex flex-col w-1/2 h-full items-center justify-center">
               <Image
                 width={50}
