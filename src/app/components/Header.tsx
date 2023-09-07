@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-export default function App() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -74,25 +74,31 @@ export default function App() {
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Linkin
-              as={Link}
-              className="w-full"
-              color={
-                index === 0
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "warning"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Linkin>
-          </NavbarMenuItem>
-        ))}
+        <NavbarItem>
+          <Linkin as={Link} color="foreground" href="/#hero-cover">
+            Início
+          </Linkin>
+        </NavbarItem>
+        <NavbarMenuItem>
+          <Linkin as={Link} href="/#tab-produtos">
+            Produtos
+          </Linkin>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Linkin as={Link} href="/#tab-servicos">
+            Serviços
+          </Linkin>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Linkin as={Link} color="foreground" href="/#tab-sobre">
+            Sobre
+          </Linkin>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Linkin as={Link} color="foreground" href="/#tab-contato">
+            Contato
+          </Linkin>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
