@@ -36,7 +36,7 @@ export default function DetalhesProduto({
   return (
     <div className="w-full min-h-screen justify-center flex">
       {product ? (
-        <div className="flex w-full lg:w-3/4 flex-wrap lg:flex-nowrap lg:justify-between @screen sm:w-full items-center mt-12 pt-5 justify-center p-4 @screen sm:pr-5 sm:pl-5">
+        <div className="flex w-full md:w-3/4 md:flex-nowrap md:justify-between md:border md:border-red-500 lg:w-3/4 flex-wrap lg:flex-nowrap lg:justify-between @screen sm:w-full items-center mt-12 pt-5 justify-center p-4 @screen sm:pr-5 sm:pl-5">
           <div className="flex flex-col items-center">
             <h1 className="text-4xl m-0 mb-4">{product[0].name}</h1>
             <ImageUI
@@ -52,11 +52,11 @@ export default function DetalhesProduto({
             <RedirectButton
               title="Chamar no WhatsApp"
               link={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Olá, Anderson! Gostaria de saber mais sobre o produto ${product[0].name}`}
-              styles="bg-green-700"
+              styles="bg-green-700 animate-bounce duration-1000 hover:bg-green-600 transition mt-4"
             />
             <Accordion>
               <AccordionItem
-                key="1"
+                key={product[0].id + product[0].name}
                 aria-label="Informações adicionais"
                 title="Informação adicionais"
               >
@@ -90,8 +90,10 @@ export default function DetalhesProduto({
               link={product[0].manual!}
             />
           </div>
-
-          <ScrollShadow className=" sm:w-auto lg:w-1/2 mt-2 max-h-[480px] overflow-y-scroll">
+          <ScrollShadow
+            title="Descrição"
+            className="sm:w-auto md:w-2/3 lg:w-1/2 mt-4 max-h-[480px] overflow-y-scroll"
+          >
             <p className="text-justify">{product[0].description}</p>
           </ScrollShadow>
         </div>

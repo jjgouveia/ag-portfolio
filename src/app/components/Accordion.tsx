@@ -6,8 +6,6 @@ const AccordionItem: React.FC<{ title: string; children: ReactNode }> = ({
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Usar useEffect para controlar a animação
   useEffect(() => {
     if (isOpen) {
       const timer = setTimeout(() => {
