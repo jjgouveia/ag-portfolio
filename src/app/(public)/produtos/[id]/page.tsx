@@ -54,7 +54,7 @@ export default function DetalhesProduto({
             />
             <p className="text-sm mt-2">{`${product[0].category} • ${product[0].context}`}</p>
 
-            <p className="w-3/4 text-center bg-green-500 text-black rounded">
+            <p className="w-3/4 text-center bg-green-600 text-black rounded mt-2">
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Olá, Anderson! Gostaria de saber mais sobre o produto ${product[0].name}`}
               >
