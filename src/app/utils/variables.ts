@@ -1,0 +1,1 @@
+export const phoneNumber: string = "5581988670414";

@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             />
             <ContactComponent
               icon="/assets/images/icons/instagram.svg"
-              link="https://wa.me/5581988670414"
+              link={`https://wa.me/${5581988670414}`}
               text="Visualizar perfil no Instagram"
               altText="Perfil oficial no Instagram"
             />

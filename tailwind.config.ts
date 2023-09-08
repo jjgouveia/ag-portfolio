@@ -26,6 +26,9 @@ const config: Config = {
         'primary-bg': 'var(--color-primary-bg)',
         'secondary-bg': 'var(--color-secondary-bg)',
       },
+      screens: {
+        'sm': '360px',
+      },
     },
   }, darkMode: "class",
   plugins: [nextui()],

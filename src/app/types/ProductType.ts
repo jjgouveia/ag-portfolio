@@ -1,7 +1,12 @@
 import { Json } from "../interfaces/database.types";
 
 export type ProductType = {
-    aditional: Json[] | null;
+    aditional: [
+        {
+            peso: string,
+            dimensoes: string,
+        }
+    ] | Json[] | null;
     category: string[];
     color: string[];
     context: string;
