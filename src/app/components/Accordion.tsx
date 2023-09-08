@@ -3,13 +3,18 @@ import React, { ReactNode, useState } from "react";
 interface AccordionItemProps {
   title: string;
   children: ReactNode;
+  classNameProp?: string;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({
+  title,
+  children,
+  classNameProp,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className={classNameProp}>
       <button
         className="w-full p-4 text-left focus:outline-none hover:bg-gray-200 transition"
         onClick={() => setIsOpen(!isOpen)}
