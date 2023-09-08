@@ -62,11 +62,11 @@ export default function DetalhesProduto({
               </Link>
             </p>
 
-            <Accordion isCompact title="Informações adicionais">
+            <Accordion>
               <AccordionItem
                 className="text-white"
                 key="1"
-                aria-label="Informação adicionais"
+                aria-label="Informações adicionais"
                 title={
                   <p className="text-white text-center">
                     Informação adicionais
