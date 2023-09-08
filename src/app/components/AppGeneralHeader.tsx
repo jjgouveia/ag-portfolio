@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AppGeneralHeader() {
   return (
-    <div className="backdrop-blur-2xl bg-gray-50 flex flex-row top-0 fixed w-full h-12 z-10">
+    <div className="backdrop-blur-2xl bg-gray-50 flex flex-row top-0 fixed w-full h-12 z-[9999] border-b border-yellow-500">
       <Link
         className="flex justify-center items-center flex-1 text-black transition-all sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
         href="/#hero-cover"
