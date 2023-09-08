@@ -60,7 +60,7 @@ export default function DetalhesProduto({
 
             <Accordion>
               <AccordionItem
-                classNameProp="text-white"
+                classNameProp="text-black"
                 key="1"
                 aria-label="Informações adicionais"
                 title="Informação adicionais"
