@@ -66,7 +66,7 @@ export default function DetalhesProduto({
               <AccordionItem
                 className="text-white"
                 key="1"
-                aria-label="Peso"
+                aria-label="Informação adicionais"
                 title={
                   <p className="text-white text-center">
                     Informação adicionais
