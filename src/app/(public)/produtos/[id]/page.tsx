@@ -1,14 +1,10 @@
 "use client";
 
+import { Accordion, AccordionItem } from "@/app/components/Accordion";
 import { ProductType } from "@/app/types/ProductType";
 import { supabase } from "@/app/utils/supabase";
 import { phoneNumber } from "@/app/utils/variables";
-import {
-  Accordion,
-  AccordionItem,
-  Image as ImageUI,
-  ScrollShadow,
-} from "@nextui-org/react";
+import { Image as ImageUI, ScrollShadow } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -54,7 +50,7 @@ export default function DetalhesProduto({
             />
             <p className="text-sm mt-2">{`${product[0].category} • ${product[0].context}`}</p>
 
-            <p className="w-3/4 text-center bg-green-600 text-black rounded mt-2">
+            <p className="w-3/4 text-center bg-green-500 text-black rounded">
               <Link
                 href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Olá, Anderson! Gostaria de saber mais sobre o produto ${product[0].name}`}
               >
@@ -64,14 +60,10 @@ export default function DetalhesProduto({
 
             <Accordion>
               <AccordionItem
-                className="text-white"
+                classNameProp="text-white"
                 key="1"
                 aria-label="Informações adicionais"
-                title={
-                  <p className="text-white text-center">
-                    Informação adicionais
-                  </p>
-                }
+                title="Informação adicionais"
               >
                 <p>
                   Peso:{" "}
