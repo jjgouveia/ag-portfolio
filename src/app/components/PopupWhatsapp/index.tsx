@@ -47,19 +47,19 @@ const WhatsAppComponent: React.FC = () => {
       />
 
       <div className="nav-bottom">
-        <div className="popup-whatsapp fadeIn">
+        <div className="popup-whatsapp fadeIn font-sans">
           <div className="content-whatsapp -top">
             <button type="button" className="closePopup">
               <i className="material-icons icon-font-color">close</i>
             </button>
-            <p>Oi! Como posso ajudar? 😉</p>
+            <h3>Oi! Como posso ajudar? 😉</h3>
           </div>
           <div className="content-whatsapp -bottom">
             <input
               className="whats-input"
               id="whats-in"
               type="text"
-              placeholder="Send message..."
+              placeholder="Escreva sua mensagem..."
             />
             <button className="send-msPopup" id="send-btn" type="button">
               <i className="material-icons icon-font-color--black">send</i>
