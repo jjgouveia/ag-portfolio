@@ -12,7 +12,7 @@ export interface Database {
       products: {
         Row: {
           aditional: Json[] | null
-          category: string[]
+          category: string
           color: string[]
           context: string
           description: string | null
@@ -24,7 +24,7 @@ export interface Database {
         }
         Insert: {
           aditional?: Json[] | null
-          category: string[]
+          category: string
           color: string[]
           context: string
           description?: string | null
@@ -36,7 +36,7 @@ export interface Database {
         }
         Update: {
           aditional?: Json[] | null
-          category?: string[]
+          category?: string
           color?: string[]
           context?: string
           description?: string | null

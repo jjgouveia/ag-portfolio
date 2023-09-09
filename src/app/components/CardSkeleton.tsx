@@ -2,7 +2,7 @@ import { Card, Skeleton } from "@nextui-org/react";
 
 export default function CardSkeleton() {
   return (
-    <Card className="w-[300px] h-[380px] min-w-[240px] min-h-[340px] gap-4 mt-10 mb-10 p-4">
+    <Card className="w-[300px] h-[380px] min-w-[240px] min-h-[340px] gap-4 my-10 p-4">
       <Skeleton>
         <div className="h-36 rounded-lg bg-default-300"></div>
       </Skeleton>

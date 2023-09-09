@@ -53,9 +53,7 @@ export default function DetalhesProduto({
                 <LinkUI
                   as={Link}
                   isBlock
-                  href={`/categoria/${product[0].category
-                    .toString()
-                    .toLowerCase()}`}
+                  href={`/categoria/${product[0].category}`}
                   color="warning"
                   showAnchorIcon
                 >
@@ -97,6 +95,7 @@ export default function DetalhesProduto({
                     )?.peso
                   }
                 </p>
+
                 <p>
                   Dimensões:{" "}
                   {
@@ -108,13 +107,13 @@ export default function DetalhesProduto({
                     )?.dimensoes
                   }
                 </p>
+                <RedirectButton
+                  title="Baixar Manual"
+                  styles="border-t border-grey-700 bg-amber-500 text-sky-900 font-semibold transition hover:bg-amber-600"
+                  link={product[0].manual!}
+                />
               </AccordionItem>
             </Accordion>
-            <RedirectButton
-              title="Baixar Manual"
-              styles="bg-sky-900 hover:bg-sky-700 transition"
-              link={product[0].manual!}
-            />
           </div>
           <ScrollShadow
             title="Descrição"

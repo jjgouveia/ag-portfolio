@@ -7,7 +7,7 @@ export type ProductType = {
             dimensoes: string,
         }
     ] | Json[] | null;
-    category: string[];
+    category: string;
     color: string[];
     context: string;
     description: string | null;
