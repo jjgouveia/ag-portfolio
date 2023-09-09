@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import ProductCard from "../components/Card/ProductCard";
 import ContactComponent from "../components/ContactComponent";
+import ContactForm from "../components/ContactForm";
 import Hero from "../components/Hero";
 import WhatsAppComponent from "../components/PopupWhatsapp";
 import SectionComponent from "../components/SectionComponent";
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen overflow-x-hidden">
-        <SectionComponent id="tab-produtos" title="Produtos">
+        <SectionComponent id="tab-produtos" title="Equipamentos">
           <ProductCard />
         </SectionComponent>
         <SectionComponent
@@ -60,6 +61,7 @@ const Home: React.FC = () => {
               text="Visualizar perfil no Instagram"
               altText="Perfil oficial no Instagram"
             />
+            <ContactForm />
           </ul>
         </SectionComponent>
         <section className="et-slide" id="tab-footer">

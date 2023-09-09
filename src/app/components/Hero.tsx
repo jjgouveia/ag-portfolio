@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
           href="#tab-produtos"
         >
-          Produtos
+          Equipamentos
         </a>
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"

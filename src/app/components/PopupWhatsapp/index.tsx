@@ -30,9 +30,9 @@ const WhatsAppComponent: React.FC = () => {
           window.open(`https://wa.me/${phoneNumber}?text=` + relmsg, "_blank");
         });
 
-        setTimeout(() => {
-          popup.classList.add("is-active-whatsapp-popup");
-        }, 3000);
+        // setTimeout(() => {
+        //   popup.classList.add("is-active-whatsapp-popup");
+        // }, 3000);
       }
     };
 
