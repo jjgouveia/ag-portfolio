@@ -6,8 +6,13 @@ import RedirectButton from "@/app/components/RedirectButton";
 import { ProductType } from "@/app/types/ProductType";
 import { supabase } from "@/app/utils/supabase";
 import { phoneNumber } from "@/app/utils/variables";
-import { Image as ImageUI, ScrollShadow } from "@nextui-org/react";
+import {
+  Image as ImageUI,
+  Link as LinkUI,
+  ScrollShadow,
+} from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useEffect, useState } from "react";
 
@@ -41,8 +46,21 @@ export default function DetalhesProduto({
           <div className="flex flex-col items-center">
             <div className="flex w-full flex-row justify-start items-start">
               <p className="text-sm w-full text-left mt-2">
-                <span>{`${product[0].context}`}</span> •{" "}
-                <span>{`${product[0].category}`}</span>
+                <LinkUI as={Link} isBlock href="#" color="warning">
+                  <span>{`${product[0].context}`}</span>
+                </LinkUI>
+                <span> • </span>
+                <LinkUI
+                  as={Link}
+                  isBlock
+                  href={`/categoria/${product[0].category
+                    .toString()
+                    .toLowerCase()}`}
+                  color="warning"
+                  showAnchorIcon
+                >
+                  <span>{`${product[0].category}`}</span>
+                </LinkUI>
               </p>
             </div>
             <h1 className="text-4xl m-0 mb-4 text-justify">
@@ -94,7 +112,7 @@ export default function DetalhesProduto({
             </Accordion>
             <RedirectButton
               title="Baixar Manual"
-              styles="bg-gray-700"
+              styles="bg-sky-900 hover:bg-sky-700 transition"
               link={product[0].manual!}
             />
           </div>

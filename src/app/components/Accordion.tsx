@@ -27,7 +27,7 @@ const AccordionItem: React.FC<{ title: string; children: ReactNode }> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="accordion-content"
+            className="accordion-content px-2"
             initial={{ opacity: 0, height: 0, overflow: "hidden" }}
             animate={{ opacity: 1, height: "auto", overflow: "visible" }}
             exit={{ opacity: 0, height: 0, overflow: "hidden" }}

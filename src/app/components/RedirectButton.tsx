@@ -9,7 +9,7 @@ export default function RedirectButton({
   title,
   link,
   styles,
-  className = `w-2/3 mx-auto mt-3 p-1 font-semibold text-center rounded ${styles}`,
+  className = `w-2/3 mx-auto mt-3 p-1 font-semibold text-center rounded items-center justify-center ${styles}`,
 }: RedirectButtonProps) {
   return (
     <p className={className}>
