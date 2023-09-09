@@ -46,13 +46,13 @@ const WhatsAppComponent: React.FC = () => {
         rel="stylesheet"
       />
 
-      <div className="nav-bottom">
+      <div className="nav-bottom ">
         <div className="popup-whatsapp fadeIn font-sans">
           <div className="content-whatsapp -top">
             <button type="button" className="closePopup">
               <i className="material-icons icon-font-color">close</i>
             </button>
-            <h3>Oi! Como posso ajudar? 😉</h3>
+            <h3 className="text-gray-500">Oi! Como posso ajudar? 😉</h3>
           </div>
           <div className="content-whatsapp -bottom">
             <input
@@ -75,7 +75,7 @@ const WhatsAppComponent: React.FC = () => {
             width={32}
           />
         </button>
-        <div className="circle-anime"></div>
+        <div className="circle-anime animate-pulse"></div>
       </div>
     </div>
   );

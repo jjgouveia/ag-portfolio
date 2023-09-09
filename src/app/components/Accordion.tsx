@@ -19,7 +19,7 @@ const AccordionItem: React.FC<{ title: string; children: ReactNode }> = ({
   return (
     <div>
       <button
-        className="w-full p-1 text-center rounded-md focus:outline-none hover:bg-amber-600 transition"
+        className="w-full p-1 text-center rounded-md focus:outline-none hover:bg-amber-400 transition"
         onClick={() => setIsOpen(!isOpen)}
       >
         {title}
@@ -44,7 +44,7 @@ const AccordionItem: React.FC<{ title: string; children: ReactNode }> = ({
 const Accordion: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className="w-full mx-auto mt-4">
-      <div className="bg-amber-500 text-sky-900 font-semibold shadow-md rounded-md">
+      <div className="bg-amber-200 text-sky-900 font-semibold shadow-md rounded-md">
         {children}
       </div>
     </div>

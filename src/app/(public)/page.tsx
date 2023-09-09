@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+      <main className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen overflow-x-hidden">
         <SectionComponent id="tab-produtos" title="Produtos">
           <ProductCard />
         </SectionComponent>
