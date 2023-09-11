@@ -119,7 +119,6 @@ input[type="button"],
   font-size: 0.8em;
   font-weight: 700;
   height: 3.5em;
-  letter-spacing: 0.1em;
   line-height: 3.5em;
   overflow: hidden;
   padding: 0 2em;
@@ -220,9 +219,7 @@ input[type="button"].icon:before,
 }
 
 .cd-popup-container p {
-  margin: 0;
-  padding: 3em 1em;
-  padding-top: 1em;
+  padding: 1em 1em;
 }
 
 .cd-popup-container .cd-popup-close {

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
 
-// Check for valid email syntax
 function validateEmail(email: string): boolean {
   const re =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -19,7 +18,7 @@ function ContactForm() {
   const [formState, setFormState] = useState({
     isContactVisible: false,
     isNotificationVisible: false,
-    notificationText: "Thanks for getting in touch!",
+    notificationText: "Obrigado!",
   });
 
   const handleInputChange = (
@@ -73,31 +72,28 @@ function ContactForm() {
           } else {
             setFormState({
               ...formState,
-              notificationText:
-                "<strong>Me deixe saber o que está pensando</strong>",
+              notificationText: "Me deixe saber o que está pensando",
               isNotificationVisible: true,
             });
           }
         } else {
           setFormState({
             ...formState,
-            notificationText: "<strong>Forneça um nome.</strong>",
+            notificationText: "Forneça um nome.",
             isNotificationVisible: true,
           });
         }
       } else {
         setFormState({
           ...formState,
-          notificationText:
-            "<strong>Por favor, forneça um email válido.</strong>",
+          notificationText: "Por favor, forneça um email válido.",
           isNotificationVisible: true,
         });
       }
     } else {
       setFormState({
         ...formState,
-        notificationText:
-          "<h3><strong><em>Ops: confirme que não é um robô.</em></strong></h3>",
+        notificationText: "Ops: confirme que não é um robô.",
         isNotificationVisible: true,
       });
     }
@@ -200,14 +196,25 @@ function ContactForm() {
         }`}
         role="alert"
       >
-        <div className="cd-popup-container">
-          <a href="" className="cd-popup-close cd-close-button">
-            <p className="fa fa-times" style={{ pointerEvents: "none" }}>
-              X
-            </p>
-          </a>
+        <div className="cd-popup-container mt-8 flex-col gap-8">
+          <div className="flex flex-col-reverse">
+            <button
+              className="w-full min-h-auto bg-sky-900 text-white text-md font-thin rounded-md font-sans"
+              onClick={() =>
+                setFormState({
+                  ...formState,
 
-          <h3 id="notification-text">{formState.notificationText}</h3>
+                  isNotificationVisible: false,
+                })
+              }
+            >
+              Fechar
+            </button>
+
+            <p id="notification-text" className="tracking-wider text-black">
+              {formState.notificationText}
+            </p>
+          </div>
         </div>
       </div>
     </div>
