@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             />
             <ContactComponent
               icon="/assets/images/icons/instagram.svg"
-              link="https://www.instagram.com/andersondentalpadrao/"
+              link="https://www.instagram.com/andersondentalpadrao"
               text="Visualizar perfil no Instagram"
               altText="Perfil oficial no Instagram"
             />

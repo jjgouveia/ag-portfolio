@@ -18,7 +18,7 @@ const WhatsAppComponent: React.FC = () => {
 
         btnOpenPopup.addEventListener("click", () => {
           popup.classList.toggle("is-active-whatsapp-popup");
-          popup.classList.add("fadeIn"); // Adiciona classe para controlar a animação
+          popup.classList.add("fadeIn");
         });
 
         sendBtn.addEventListener("click", () => {

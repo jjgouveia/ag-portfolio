@@ -76,22 +76,19 @@ const Footer: React.FC = () => {
                       <Link href="/terms">Termos &amp; condições</Link>
                     </li>
                     <li>
-                      <a href="#">Suporte</a>
+                      <Link href="/suport">Suporte</Link>
                     </li>
                     <li>
-                      <a href="#">Políticas</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacidade</a>
+                      <Link href="/privacy">Privacidade</Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-span-1">
                 <div className="p-4">
-                  <h3 className="font-semibold text-xl text-indigo-700 font-sans">
+                  <h2 className="font-semibold text-xl text-indigo-700 font-sans">
                     Stellaria Soluções Web
-                  </h3>
+                  </h2>
                   <div className="mt-4 text-gray-600">
                     <a
                       href="https://www.linkedin.com/in/jarbasgouveia/"
