@@ -105,6 +105,14 @@ const Footer: React.FC = () => {
                     >
                       <i className="fab fa-github text-xl"></i>
                     </a>
+                    <a
+                      className="ml-2"
+                      href="https://juniorgouveia.me/"
+                      target="_blank"
+                      title="Portfolio do Desenvolvedor"
+                    >
+                      <i className="fa fa-id-card text-xl"></i>
+                    </a>
                   </div>
                 </div>
               </div>

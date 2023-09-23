@@ -37,16 +37,16 @@ const Home: React.FC = () => {
               quality={100}
               className="rounded-md"
             />
-            <h2>Anderson Gouveia,</h2>
-            <p className="text-justify ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              consequuntur illo, saepe ex sequi nisi veniam inventore quo
-              voluptate assumenda vitae dicta accusantium debitis excepturi,
-              eligendi tenetur? Magnam, recusandae neque? Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Voluptas a cupiditate libero
-              omnis! At tenetur, fugit cumque, ab rerum ullam harum unde minus
-              dolores iure distinctio et cupiditate sapiente quia!
-            </p>
+            <div className="border-b-1 border-slate-400">
+              <h2 className="text-2xl">Anderson Gouveia</h2>
+            </div>
+            <h2 className="font-sans">
+              • Executivo de vendas na <strong>Dental Padrao</strong>
+            </h2>
+            <h2 className="font-sans">
+              • Especialista em equipamentos odontológicos pela{" "}
+              <strong>Gnatus</strong>
+            </h2>
           </div>
         </SectionComponent>
         <SectionComponent id="tab-contato" title="Contato">

@@ -82,9 +82,12 @@ function ContactForm() {
       if (validateEmail(email)) {
         if (name) {
           if (message) {
-            window.location.href = `mailto: ${"gouvik.dev@gmail.com"}?subject=${
+            window.location.href = `mailto: ${"anderson@dentalpadrao.com.br"}?subject=${
               "Mensagem enviada por: " + name
-            }&body=${message}%0A%0A${name} - ${email}`;
+            }&body=${message}
+
+
+           ➡️ ${name} - ${email}`;
 
             closeContactForm();
           } else {
