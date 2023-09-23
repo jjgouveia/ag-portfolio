@@ -88,7 +88,7 @@ const GlobalError: React.FC = () => {
           Estamos construindo algo incrível para você!
         </p>
         <p className="text-sm text-slate-600 space-x-1">
-          ps: Está tudo bem! Também estamos empolgados!
+          PS: Está tudo bem! Também estamos empolgados!
         </p>
         <div className="flex flex-row justify-center items-center space-x-2">
           <button className="mt-8 px-4 rounded">

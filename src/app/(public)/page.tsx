@@ -10,6 +10,7 @@ import Hero from "../components/Hero";
 import WhatsAppComponent from "../components/PopupWhatsapp";
 import SectionComponent from "../components/SectionComponent";
 import Services from "../components/Services";
+import { phoneNumber } from "../utils/variables";
 
 const Home: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
               width={250}
               height={250}
               quality={100}
-              className="rounded-tl-3xl rounded-br-3xl"
+              className="rounded-md"
             />
             <h2>Anderson Gouveia,</h2>
             <p className="text-justify ">
@@ -52,13 +53,13 @@ const Home: React.FC = () => {
           <ul className="flex flex-col w-full gap-4">
             <ContactComponent
               icon="/assets/images/icons/whatsapp.svg"
-              link="https://wa.me/5581988670414"
+              link={`https://wa.me/${phoneNumber}`}
               text="Entrar em contato pelo WhatsApp"
               altText="WhatsApp de Anderson Gouveia"
             />
             <ContactComponent
               icon="/assets/images/icons/instagram.svg"
-              link={`https://wa.me/${5581988670414}`}
+              link="https://www.instagram.com/andersondentalpadrao/"
               text="Visualizar perfil no Instagram"
               altText="Perfil oficial no Instagram"
             />

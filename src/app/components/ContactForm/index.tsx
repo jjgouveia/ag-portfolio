@@ -21,6 +21,22 @@ function ContactForm() {
     notificationText: "Obrigado!",
   });
 
+  const sendThroughMailto = ({
+    name,
+    message,
+    email,
+  }: {
+    name: string;
+    message: string;
+    email: string;
+  }) => {
+    const mailto = `mailto: ${"gouvik.dev@gmail.com"}?subject=${
+      "Mensagem enviada por: " + name
+    }&body=${message}%0A%0A${name} - ${email}`;
+
+    return <a href={mailto}></a>;
+  };
+
   const handleInputChange = (
     event: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLInputElement
@@ -66,8 +82,11 @@ function ContactForm() {
       if (validateEmail(email)) {
         if (name) {
           if (message) {
-            // Handle submitting data somewhere
-            // For example, you can make an API request here
+            window.open(
+              `mailto: ${"gouvik.dev@gmail.com"}?subject=${
+                "Mensagem enviada por: " + name
+              }&body=${message}%0A%0A${name} - ${email}`
+            );
             closeContactForm();
           } else {
             setFormState({

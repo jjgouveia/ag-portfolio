@@ -89,8 +89,8 @@ const Footer: React.FC = () => {
               </div>
               <div className="col-span-1">
                 <div className="p-4">
-                  <h3 className="font-semibold text-xl text-indigo-700">
-                    Soluções Web
+                  <h3 className="font-semibold text-xl text-indigo-700 font-sans">
+                    Stellaria Soluções Web
                   </h3>
                   <div className="mt-4 text-gray-600">
                     <a

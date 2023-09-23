@@ -29,10 +29,6 @@ const WhatsAppComponent: React.FC = () => {
           const relmsg = msg.replace(/ /g, "%20");
           window.open(`https://wa.me/${phoneNumber}?text=` + relmsg, "_blank");
         });
-
-        // setTimeout(() => {
-        //   popup.classList.add("is-active-whatsapp-popup");
-        // }, 3000);
       }
     };
 
@@ -52,14 +48,14 @@ const WhatsAppComponent: React.FC = () => {
             <button type="button" className="closePopup">
               <i className="material-icons icon-font-color">close</i>
             </button>
-            <h3 className="text-gray-500">Oi! Como posso ajudar? 😉</h3>
+            <h3 className="text-gray-500">Oi! Como posso ajudar? 🙋🏾‍♂️</h3>
           </div>
           <div className="content-whatsapp -bottom">
             <input
               className="whats-input"
               id="whats-in"
               type="text"
-              placeholder="Escreva sua mensagem..."
+              placeholder="Escreva uma mensagem"
             />
             <button className="send-msPopup" id="send-btn" type="button">
               <i className="material-icons icon-font-color--black">send</i>
