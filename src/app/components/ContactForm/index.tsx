@@ -103,14 +103,9 @@ function ContactForm() {
     <div className="contact-container mt-8">
       <ul className="actions">
         <li>
-          <a
-            href="#"
-            id="contact"
-            className="button big"
-            onClick={openContactForm}
-          >
+          <button id="contact" className="button big" onClick={openContactForm}>
             Entre em contato por email
-          </a>
+          </button>
         </li>
       </ul>
 
@@ -140,32 +135,38 @@ function ContactForm() {
             </p>
 
             <div className="name">
-              <label htmlFor="name">Nome</label>
+              <label htmlFor="name"></label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
+                className="w-full text-slate-900"
+                placeholder="Nome"
               />
             </div>
             <div className="email">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email"></label>
               <input
                 type="text"
                 id="email"
                 name="email"
                 value={formData.email}
+                className="w-full text-slate-900"
                 onChange={handleInputChange}
+                placeholder="Email"
               />
             </div>
             <div className="message">
-              <label htmlFor="message">Mensagem</label>
+              <label htmlFor="message"></label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
+                className="w-full text-slate-900"
+                placeholder="Mensagem"
               ></textarea>
             </div>
             <br />
@@ -181,7 +182,7 @@ function ContactForm() {
             </div>
             <br />
             <div className="submit">
-              <p className="user-message" id="contactblurb">
+              <p className="user-message text-slate-900" id="contactblurb">
                 Dúvidas, sugestões e comentários em geral.
               </p>
               <input type="submit" name="submit" id="submit" value="Enviar!" />

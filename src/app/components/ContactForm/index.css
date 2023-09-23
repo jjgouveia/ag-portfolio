@@ -293,6 +293,7 @@ label:hover {
     margin: 0;
     padding-top: 1em;
     width: 100% !important;
+    height: 100vh;
     max-width: 100% !important;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
@@ -320,27 +321,6 @@ label:hover {
 .contact-form .name input:focus,
 .contact-form .name textarea:focus {
   background: #f4f5f6 !important;
-}
-
-.contact-form .email label,
-.contact-form .message label,
-.contact-form .name label {
-  color: #cbd0d3 !important;
-  left: 23px !important;
-  position: absolute !important;
-  top: 23px !important;
-  -moz-transition: all, 150ms !important;
-  -o-transition: all, 150ms !important;
-  -webkit-transition: all, 150ms !important;
-  transition: all, 150ms !important;
-}
-
-.contact-form .email.typing label,
-.contact-form .message.typing label,
-.contact-form .name.typing label {
-  color: #3498db !important;
-  font-size: 10px !important;
-  top: 7px !important;
 }
 
 .contact-form .email,

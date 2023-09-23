@@ -5,6 +5,7 @@ import React from "react";
 import ProductCard from "../components/Card/ProductCard";
 import ContactComponent from "../components/ContactComponent";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import WhatsAppComponent from "../components/PopupWhatsapp";
 import SectionComponent from "../components/SectionComponent";
@@ -64,12 +65,9 @@ const Home: React.FC = () => {
             <ContactForm />
           </ul>
         </SectionComponent>
-        <section className="et-slide" id="tab-footer">
-          <h1>Other</h1>
-          <h3>something about other</h3>
-        </section>
         <WhatsAppComponent />
       </main>
+      <Footer />
     </>
   );
 };
