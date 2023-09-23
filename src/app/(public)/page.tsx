@@ -40,9 +40,7 @@ const Home: React.FC = () => {
             <div className="border-b-1 border-slate-400">
               <h2 className="text-2xl">Anderson Gouveia</h2>
             </div>
-            <h2 className="font-sans">
-              • Executivo de vendas na <strong>Dental Padrao</strong>
-            </h2>
+            <h2 className="font-sans">• Executivo de vendas</h2>
             <h2 className="font-sans">
               • Especialista em equipamentos odontológicos pela{" "}
               <strong>Gnatus</strong>
