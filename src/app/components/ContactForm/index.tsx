@@ -82,11 +82,10 @@ function ContactForm() {
       if (validateEmail(email)) {
         if (name) {
           if (message) {
-            window.open(
-              `mailto: ${"gouvik.dev@gmail.com"}?subject=${
-                "Mensagem enviada por: " + name
-              }&body=${message}%0A%0A${name} - ${email}`
-            );
+            window.location.href = `mailto: ${"gouvik.dev@gmail.com"}?subject=${
+              "Mensagem enviada por: " + name
+            }&body=${message}%0A%0A${name} - ${email}`;
+
             closeContactForm();
           } else {
             setFormState({
