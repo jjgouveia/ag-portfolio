@@ -1,0 +1,28 @@
+/* CSS para o dropdown */
+.et-dropdown {
+  display: none;
+  top: 50px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 130px;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+}
+
+.et-dropdown span {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.et-dropdown span:hover {
+  background-color: #f1f1f1;
+}
+
+/* Exibir o dropdown quando necessário */
+.et-hero-tabs-container:hover .et-dropdown {
+  display: block;
+}

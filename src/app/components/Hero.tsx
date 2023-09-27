@@ -1,6 +1,31 @@
-import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import "./hero.css";
 
 const Hero: React.FC = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showSecondDropdown, setShowSecondDropdown] = useState(false);
+
+  const { push } = useRouter();
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  useEffect(() => {
+    const closeDropdown = () => {
+      setShowDropdown(false);
+    };
+
+    window.addEventListener("scroll", closeDropdown);
+    window.addEventListener("resize", closeDropdown);
+
+    return () => {
+      window.removeEventListener("scroll", closeDropdown);
+      window.removeEventListener("resize", closeDropdown);
+    };
+  }, []);
+
   useEffect(() => {
     class StickyNavigation {
       private currentId: string | null = null;
@@ -138,30 +163,135 @@ const Hero: React.FC = () => {
         >
           Início
         </a>
+
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          // onMouseEnter={toggleDropdown}
+          // onMouseLeave={toggleDropdown}
+          onClick={() => setShowDropdown(!showDropdown)}
           href="#tab-produtos"
         >
           Equipamentos
+          {/* {showDropdown && (
+            <div className="et-dropdown">
+              <span
+                onClick={() => {
+                  push("/equipamentos/gnatus");
+                  setShowDropdown(false);
+                }}
+              >
+                Gnatus ⭐
+              </span>
+              <span>D700</span>
+              <span>Dentemed</span>
+              <span>Evolve</span>
+            </div>
+          )} */}
+          {showDropdown && (
+            <div className="et-dropdown">
+              <span
+                onMouseEnter={() => setShowSecondDropdown(true)}
+                onMouseLeave={() => setShowSecondDropdown(false)}
+              >
+                Gnatus ⭐
+                {showSecondDropdown && (
+                  <div className="min-w-[130px] bg-slate-200 absolute left-[8.1rem] bottom-2 shadow-2xl">
+                    <span>G1</span>
+                    <span>G2</span>
+                    <span>G3</span>
+                    <span>G4</span>
+                  </div>
+                )}
+              </span>
+              <span>D700</span>
+              <span>Dentemed</span>
+              <span>Evolve</span>
+            </div>
+          )}
         </a>
+
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
           href="#tab-servicos"
         >
           Serviços
         </a>
+
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
           href="#tab-sobre"
         >
           Sobre
         </a>
+
         <a
           className="et-hero-tab sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl"
           href="#tab-contato"
         >
           Contato
         </a>
+
+        {/* <nav className="main_element">
+          <ul className="papa">
+            <li>
+              {" "}
+              <a href="#">home</a>
+            </li>
+            <li>
+              {" "}
+              <a href="#" className="show">
+                learn
+              </a>
+              <div className="inside_items">
+                <ul>
+                  <li>
+                    {" "}
+                    <a href="#">css</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#">html</a>
+                  </li>
+                  <li className="father">
+                    {" "}
+                    <a href="#">photoshop</a>
+                    <ul className="inside_items2">
+                      <li>
+                        <a href="#"> level 1</a>
+                      </li>
+                      <li>
+                        <a href="#"> level 2</a>
+                      </li>
+                      <li>
+                        <a href="#"> level 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#">illustrator</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#">inDesign</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              {" "}
+              <a href="#">contact</a>
+            </li>
+            <li>
+              {" "}
+              <a href="#">about</a>
+            </li>
+            <li>
+              {" "}
+              <a href="#">more</a>
+            </li>
+          </ul>
+        </nav> */}
         <span className="et-hero-tab-slider"></span>
       </div>
     </section>

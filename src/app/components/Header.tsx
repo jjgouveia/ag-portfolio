@@ -16,15 +16,6 @@ import React from "react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Início",
-    "Produtos",
-    "Serviços",
-    "Sobre",
-    "Contato",
-    "Ajuda & Feedback",
-  ];
-
   return (
     <Navbar
       isBordered
