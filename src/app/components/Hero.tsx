@@ -195,7 +195,13 @@ const Hero: React.FC = () => {
               >
                 Gnatus ⭐
                 {showSecondDropdown && (
-                  <div className="min-w-[130px] bg-slate-200 absolute left-[8.1rem] bottom-2 shadow-2xl">
+                  <div
+                    className="min-w-[130px] bg-slate-200 absolute left-[8.1rem] bottom-2"
+                    style={{
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                      border: "1px solid #ccc",
+                    }}
+                  >
                     <span>G1</span>
                     <span>G2</span>
                     <span>G3</span>
